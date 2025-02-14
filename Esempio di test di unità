@@ -1,0 +1,12 @@
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class UnitTest {
+    @Test
+    public void testMultiplication() {
+        int a = 5;
+        int b = 4;
+        int result = a * b;
+        assertEquals(20, result);
+    }
+}
