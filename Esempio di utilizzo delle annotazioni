@@ -1,0 +1,39 @@
+import org.junit.Before;
+import org.junit.After;
+import org.junit.BeforeClass;
+import org.junit.AfterClass;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class ExampleTest {
+    private static int counter;
+
+    @BeforeClass
+    public static void setUpBeforeClass() {
+        counter = 0;
+    }
+
+    @AfterClass
+    public static void tearDownAfterClass() {
+        System.out.println("Tests executed: " + counter);
+    }
+
+    @Before
+    public void setUp() {
+        System.out.println("Starting a test...");
+    }
+
+    @After
+    public void tearDown() {
+        counter++;
+        System.out.println("Test finished.");
+    }
+
+    @Test
+    public void testAddition() {
+        int a = 10;
+        int b = 20;
+        int result = a + b;
+        assertEquals(30, result);
+    }
+}
