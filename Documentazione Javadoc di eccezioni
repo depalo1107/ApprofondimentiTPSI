@@ -1,0 +1,13 @@
+/**
+ * Calcola la divisione di due numeri.
+ * @param a il numeratore.
+ * @param b il denominatore.
+ * @return il risultato della divisione.
+ * @throws ArithmeticException se il denominatore è zero.
+ */
+public double dividi(int a, int b) throws ArithmeticException {
+    if (b == 0) {
+        throw new ArithmeticException("Divisione per zero.");
+    }
+    return (double) a / b;
+}
