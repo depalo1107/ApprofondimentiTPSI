@@ -1,0 +1,15 @@
+/**
+     * Divide due numeri.
+     * <p><b>Attenzione:</b> divisione per zero lancia un'eccezione.</p>
+     * 
+     * @param a numeratore
+     * @param b denominatore
+     * @return il risultato della divisione
+     * @throws ArithmeticException se b è zero
+     */
+    public int dividi(int a, int b) {
+        if (b == 0) {
+            throw new ArithmeticException("Impossibile dividere per zero.");
+        }
+        return a / b;
+    }
