@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Scala di precisione 2"
+echo "5.5 + 2.3" | bc
+echo "10.0 / 3.0" | bc -l
