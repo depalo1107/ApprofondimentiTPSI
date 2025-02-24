@@ -1,0 +1,26 @@
+/**
+ * La classe Main contiene il punto di ingresso del programma.
+ * Esegue delle operazioni di esempio utilizzando le classi Persona e ContoBancario.
+ */
+public class Main {
+
+    /**
+     * Punto di ingresso dell'applicazione.
+     * 
+     * @param args gli argomenti passati da riga di comando
+     */
+    public static void main(String[] args) {
+        // Crea una persona
+        Persona persona = new Persona("Mario", "Rossi");
+
+        // Crea un conto bancario per la persona
+        ContoBancario conto = new ContoBancario(persona, 1000);
+
+        // Esegui operazioni sul conto
+        System.out.println(persona.toString() + " ha un saldo iniziale di: " + conto.getSaldo());
+        conto.deposito(500);
+        System.out.println("Dopo il deposito, il saldo è: " + conto.getSaldo());
+        conto.prelievo(200);
+        System.out.println("Dopo il prelievo, il saldo è: " + conto.getSaldo());
+    }
+}
