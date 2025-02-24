@@ -1,0 +1,14 @@
+/**
+ * Classe che rappresenta una semplice calcolatrice.
+ */
+public class Calcolatrice {
+    /**
+     * Somma due numeri.
+     * @param a il primo numero.
+     * @param b il secondo numero.
+     * @return il risultato della somma.
+     */
+    public int somma(int a, int b) {
+        return a + b;
+    }
+}
