@@ -1,0 +1,64 @@
+/**
+ * La classe Persona rappresenta una persona con nome e cognome.
+ */
+public class Persona {
+    private String nome;
+    private String cognome;
+
+    /**
+     * Costruisce un oggetto Persona con nome e cognome.
+     * 
+     * @param nome il nome della persona
+     * @param cognome il cognome della persona
+     */
+    public Persona(String nome, String cognome) {
+        this.nome = nome;
+        this.cognome = cognome;
+    }
+
+    /**
+     * Ottiene il nome della persona.
+     * 
+     * @return il nome della persona
+     */
+    public String getNome() {
+        return nome;
+    }
+
+    /**
+     * Imposta il nome della persona.
+     * 
+     * @param nome il nuovo nome della persona
+     */
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    /**
+     * Ottiene il cognome della persona.
+     * 
+     * @return il cognome della persona
+     */
+    public String getCognome() {
+        return cognome;
+    }
+
+    /**
+     * Imposta il cognome della persona.
+     * 
+     * @param cognome il nuovo cognome della persona
+     */
+    public void setCognome(String cognome) {
+        this.cognome = cognome;
+    }
+
+    /**
+     * Restituisce una rappresentazione testuale della persona.
+     * 
+     * @return una stringa che rappresenta la persona
+     */
+    @Override
+    public String toString() {
+        return nome + " " + cognome;
+    }
+}
