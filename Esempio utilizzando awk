@@ -1,0 +1,2 @@
+awk 'BEGIN {print 5.5 + 2.3}'
+awk 'BEGIN {print 10.0 / 3.0}'
