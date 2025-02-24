@@ -1,0 +1,52 @@
+/**
+ * La classe ContoBancario rappresenta un conto bancario con un saldo e la possibilità
+ * di effettuare depositi e prelievi.
+ */
+public class ContoBancario {
+    private Persona proprietario;
+    private double saldo;
+
+    /**
+     * Costruisce un conto bancario associato a una persona con un saldo iniziale.
+     * 
+     * @param proprietario la persona che possiede il conto
+     * @param saldo l'importo iniziale nel conto
+     */
+    public ContoBancario(Persona proprietario, double saldo) {
+        this.proprietario = proprietario;
+        this.saldo = saldo;
+    }
+
+    /**
+     * Ottiene il saldo attuale del conto.
+     * 
+     * @return il saldo del conto
+     */
+    public double getSaldo() {
+        return saldo;
+    }
+
+    /**
+     * Esegue un deposito sul conto.
+     * 
+     * @param importo l'importo da depositare
+     */
+    public void deposito(double importo) {
+        if (importo > 0) {
+            saldo += importo;
+        }
+    }
+
+    /**
+     * Esegue un prelievo dal conto.
+     * 
+     * @param importo l'importo da prelevare
+     * @throws IllegalArgumentException se il saldo non è sufficiente
+     */
+    public void prelievo(double importo) {
+        if (importo > saldo) {
+            throw new IllegalArgumentException("Saldo insufficiente per il prelievo");
+        }
+        saldo -= importo;
+    }
+}
